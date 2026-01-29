@@ -587,3 +587,28 @@ section{
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 157, 255, 0.3);
 }
+
+.socials {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials a {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.socials a i {
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.socials a:hover i {
+    transform: scale(1.1);
+}
