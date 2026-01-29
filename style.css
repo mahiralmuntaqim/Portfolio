@@ -1,5 +1,3 @@
-
-
 *{
     margin: 0;
     padding: 0;
@@ -100,6 +98,7 @@ header{
     padding: 0.5rem 1.5rem;
     border-radius: 3rem;
     z-index: 1000;
+    max-width: 95%;
 }
 .logo{
     color: white;
@@ -114,6 +113,7 @@ header{
 .nav-links{
     display: flex;
     gap: 2rem;
+    list-style: none;
 }
 li a{
     position: relative;
@@ -152,6 +152,7 @@ li a:hover::before{
 #menu-icon{
     font-size: 2rem;
     display: none;
+    cursor: pointer;
 }
 
 section{
@@ -496,7 +497,7 @@ section{
 
 .contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.5rem;
 }
 
@@ -506,6 +507,7 @@ section{
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    flex-shrink: 0;
 }
 
 .contact-item h4 {
@@ -518,6 +520,7 @@ section{
 .contact-item p {
     color: #666;
     font-size: 0.95rem;
+    word-break: break-word;
 }
 
 .contact-item a:hover {
@@ -527,6 +530,7 @@ section{
 .contact-socials {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .contact-socials a {
@@ -611,4 +615,294 @@ section{
 
 .socials a:hover i {
     transform: scale(1.1);
+}
+
+/* ===== MOBILE RESPONSIVE STYLES ===== */
+
+@media (max-width: 1024px) {
+    section {
+        padding: 6rem 8%;
+    }
+    
+    header {
+        gap: 3rem;
+    }
+    
+    .about .about-container {
+        gap: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header Mobile */
+    header {
+        gap: 1rem;
+        padding: 0.5rem 1rem;
+        width: 90%;
+    }
+    
+    .logo {
+        font-size: 1.1rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 5rem;
+        left: -100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 2rem;
+        border-radius: 1rem;
+        transition: 0.3s ease-in-out;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    #menu-icon {
+        display: block;
+    }
+    
+    /* Sections */
+    section {
+        padding: 5rem 5%;
+        min-height: auto;
+    }
+    
+    /* About Section */
+    .about .about-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .about img {
+        width: 60vw;
+        max-width: 300px;
+    }
+    
+    .info-box h2 {
+        font-size: 2.5rem;
+    }
+    
+    .info-box h3 {
+        font-size: 1.3rem;
+    }
+    
+    .typing-text {
+        font-size: 1.2rem;
+    }
+    
+    .cursor {
+        font-size: 1.2rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .socials {
+        gap: 1.5rem;
+    }
+    
+    .socials i {
+        font-size: 2rem;
+    }
+    
+    /* Experience Section */
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .experience-card {
+        padding: 1.5rem;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .duration {
+        text-wrap: wrap;
+    }
+    
+    .company-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Projects Section */
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-card img {
+        height: 200px;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .project-btn {
+        width: 100%;
+    }
+    
+    /* Contact Section */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.6rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .contact-item {
+        gap: 1rem;
+    }
+    
+    .contact-item i {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small devices */
+    header {
+        padding: 0.5rem 0.8rem;
+        width: 95%;
+    }
+    
+    .logo {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 4rem 4%;
+    }
+    
+    .about img {
+        width: 70vw;
+        max-width: 250px;
+    }
+    
+    .info-box h2 {
+        font-size: 2rem;
+    }
+    
+    .info-box h3 {
+        font-size: 1.1rem;
+    }
+    
+    .typing-text,
+    .cursor {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .experience-card {
+        padding: 1.2rem;
+    }
+    
+    .company-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .company-info h4 {
+        font-size: 1rem;
+    }
+    
+    .skill-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .project-card img {
+        height: 180px;
+    }
+    
+    .project-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .project-info p {
+        font-size: 0.9rem;
+    }
+    
+    .contact-form {
+        padding: 1.2rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+    
+    .contact-socials a {
+        font-size: 1.6rem;
+    }
+    
+    /* Reduce particle animations on mobile for performance */
+    .particle {
+        display: none;
+    }
+}
+
+/* Landscape mode for tablets */
+@media (max-width: 1024px) and (orientation: landscape) {
+    section {
+        min-height: auto;
+        padding: 4rem 8%;
+    }
+    
+    .about .about-container {
+        flex-direction: row;
+        gap: 3rem;
+    }
+    
+    .about img {
+        width: 25vw;
+    }
+}
+
+/* Fix for very small screens */
+@media (max-width: 360px) {
+    .info-box h2 {
+        font-size: 1.7rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
 }
