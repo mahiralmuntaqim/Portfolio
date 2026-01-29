@@ -5,8 +5,6 @@
     font-family: 'Poppins';
     text-decoration: none;
     scroll-behavior: smooth;
-
-
 }
 
 header{
@@ -118,12 +116,51 @@ section{
     font-weight: 600;
 }
 
+.info-box h2{
+    font-size: 4rem;
+    font-weight: 600;
+}
+
 .info-box span{
     background: linear-gradient(to right,rgb(0, 157, 255),rgb(255, 0, 255));
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     font-size: 1.5rem;
+}
 
+/* ===== TYPING ANIMATION ===== */
+.typing-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.typing-text {
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.cursor {
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
 }
 
 .btn-group{
@@ -210,6 +247,7 @@ section{
 .duration {
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     font-weight: 600;
     font-size: 0.9rem;
@@ -248,6 +286,7 @@ section{
     margin-bottom: 4rem;
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
 }
 
@@ -387,6 +426,7 @@ section{
     font-size: 2rem;
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
 }
 
@@ -421,6 +461,7 @@ section{
     transform: scale(1.2);
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
 }
 
