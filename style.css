@@ -354,6 +354,54 @@ section{
     color: #333;
     border: 1px solid #ddd;
 }
+.skills {
+    padding: 8rem 9%;
+    background-color: white;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.skill-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 1rem;
+    border-left: 4px solid transparent;
+    background-image: linear-gradient(#f8f9fa, #f8f9fa),
+                      linear-gradient(to bottom, rgb(0, 157, 255), rgb(255, 0, 255));
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-card-header i {
+    font-size: 1.4rem;
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.skill-card-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 .projects {
     background-color: #f8f9fa;
 }
