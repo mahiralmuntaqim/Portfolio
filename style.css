@@ -355,19 +355,19 @@ section{
     border: 1px solid #ddd;
 }
 .skills {
-    padding: 8rem 9%;
+    padding: 5rem 9%;
     background-color: white;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
 }
 
 .skill-card {
     background: #f8f9fa;
-    padding: 2rem;
+    padding: 1.2rem 1.5rem;
     border-radius: 1rem;
     border-left: 4px solid transparent;
     background-image: linear-gradient(#f8f9fa, #f8f9fa),
@@ -378,19 +378,19 @@ section{
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .skill-card-header {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 1.5rem;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
 }
 
 .skill-card-header i {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     background-clip: text;
     -webkit-background-clip: text;
@@ -398,7 +398,7 @@ section{
 }
 
 .skill-card-header h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
