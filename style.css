@@ -359,49 +359,59 @@ section{
     background-color: white;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.2rem;
-    max-width: 1000px;
+.skills-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2rem;
+    max-width: 950px;
     margin: 0 auto;
 }
 
-.skill-card {
-    background: #f8f9fa;
-    padding: 0.8rem 1rem;
-    border-radius: 0.8rem;
-    border-left: 4px solid transparent;
-    background-image: linear-gradient(#f8f9fa, #f8f9fa),
-                      linear-gradient(to bottom, rgb(0, 157, 255), rgb(255, 0, 255));
-    background-origin: padding-box, border-box;
-    background-clip: padding-box, border-box;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.skill-card-header {
+.skill-bubble {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 0.6rem;
-    margin-bottom: 1rem;
+    cursor: default;
 }
 
-.skill-card-header i {
-    font-size: 1.1rem;
-    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+.bubble-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-bubble:hover .bubble-icon {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 157, 255, 0.2);
+    border-color: rgb(0, 157, 255);
+}
+
+.bubble-icon i {
+    font-size: 2rem;
+}
+
+.bubble-icon .gradient-icon {
+    background: linear-gradient(135deg, rgb(0, 157, 255), rgb(255, 0, 255));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
-.skill-card-header h3 {
-    font-size: 1rem;
-    font-weight: 600;
+.skill-bubble span {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #555;
+    text-align: center;
+    max-width: 80px;
 }
 
 .projects {
