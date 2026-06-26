@@ -156,12 +156,12 @@ li a:hover::before{
 }
 
 section{
-    min-height: 100vh;
-    padding: 8rem 12%;
+    padding: 6rem 12%;
     width: 100%;
     position: relative;
 }
 .about{
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,9 +172,74 @@ section{
     justify-content: center;
     gap: 10rem;
 }
-.about img{
-    width : 30vw;
+@property --gradient-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.photo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32vw;
+    height: 32vw;
+    flex-shrink: 0;
+}
+
+.photo-wrapper {
+    position: relative;
     border-radius: 50%;
+    padding: 4px;
+    background: conic-gradient(from var(--gradient-angle), rgb(0, 157, 255), rgb(255, 0, 255), rgb(0, 157, 255));
+    animation: rotate-gradient 4s linear infinite, float 6s ease-in-out infinite;
+    z-index: 2;
+    box-shadow: 0 0 40px rgba(0, 157, 255, 0.2), 0 0 80px rgba(255, 0, 255, 0.1);
+}
+
+.photo-wrapper img {
+    display: block;
+    width: 28vw;
+    max-width: 400px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.orbit-ring {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.orbit-ring-1 {
+    width: 108%;
+    height: 108%;
+    border: 2px solid transparent;
+    border-top-color: rgba(0, 157, 255, 0.6);
+    border-right-color: rgba(0, 157, 255, 0.15);
+    animation: orbit 6s linear infinite;
+}
+
+.orbit-ring-2 {
+    width: 122%;
+    height: 122%;
+    border: 2px solid transparent;
+    border-bottom-color: rgba(255, 0, 255, 0.6);
+    border-left-color: rgba(255, 0, 255, 0.15);
+    animation: orbit 10s linear infinite reverse;
+}
+
+@keyframes rotate-gradient {
+    to { --gradient-angle: 360deg; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-14px); }
+}
+
+@keyframes orbit {
+    to { transform: rotate(360deg); }
 }
 .info-box{
     display: flex;
@@ -677,6 +742,30 @@ section{
     transform: scale(1.1);
 }
 
+/* ===== LARGE SCREEN STYLES ===== */
+
+@media (min-width: 1400px) {
+    section {
+        padding: 5rem 14%;
+    }
+
+    .about .about-container {
+        gap: 7rem;
+    }
+
+    .skills-bubbles,
+    .experience-grid,
+    .projects-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .contact-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
 /* ===== MOBILE RESPONSIVE STYLES ===== */
 
 @media (max-width: 1024px) {
@@ -740,9 +829,16 @@ section{
         gap: 3rem;
     }
     
-    .about img {
-        width: 60vw;
-        max-width: 300px;
+    .photo-container {
+        width: 65vw;
+        height: 65vw;
+        max-width: 320px;
+        max-height: 320px;
+    }
+
+    .photo-wrapper img {
+        width: 56vw;
+        max-width: 280px;
     }
     
     .info-box h2 {
@@ -863,9 +959,16 @@ section{
         padding: 4rem 4%;
     }
     
-    .about img {
-        width: 70vw;
-        max-width: 250px;
+    .photo-container {
+        width: 75vw;
+        height: 75vw;
+        max-width: 265px;
+        max-height: 265px;
+    }
+
+    .photo-wrapper img {
+        width: 65vw;
+        max-width: 230px;
     }
     
     .info-box h2 {
