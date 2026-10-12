@@ -36,6 +36,7 @@ document.addEventListener('click', (e) => {
 // ===== TYPING ANIMATION =====
 const typingText = document.querySelector('.typing-text');
 const roles = [
+    'ML Intern @Penta Global',
     'Senior Year @BRACU',
     'Computer Science Student',
     'Web Developer',
